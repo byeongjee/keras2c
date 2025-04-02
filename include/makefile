@@ -37,10 +37,10 @@ DEPS = \
 	k2c_tensor_include.h
 
 # Default target
-all: libkeras2c.wasm
+all: libkeras2c.o
 
 # Building the WASM library
-libkeras2c.wasm: $(OBJ)
+libkeras2c.o: $(OBJ)
 	$(LD) --relocatable -o libkeras2c.o $(OBJ) 
 
 # Compiling individual object files
